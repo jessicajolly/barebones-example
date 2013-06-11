@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Revolver.js Barebones Example</title>
+
+    <style>
+      .slider {
+        position: relative;
+      }
+
+      .slider .slide {
+        left: 0;
+        position: absolute;
+        top: 0;
+      }
+
+      .slider .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  
+  <body>
+    <div id="wrapper">
+      <div class="slider">
+        <img class="slide" src="http://placehold.it/720x300/1abc9c/ffffff&text=Slide+1" alt="" />
+        <img class="slide hidden" src="http://placehold.it/720x300/3498db/ffffff&text=Slide+2" alt="" />
+        <img class="slide hidden" src="http://placehold.it/720x300/e74c3c/ffffff&text=Slide+3" alt="" />
+        <img class="slide hidden" src="http://placehold.it/720x300/34495e/ffffff&text=Slide+4" alt="" />
+        <img class="slide hidden" src="http://placehold.it/720x300/2ecc71/ffffff&text=Slide+5" alt="" />
+      </div>
+    </div>
+    
+    <!-- Revolver -->
+    <script src="components/lodash/lodash.js"></script>
+    <script src="components/bean/bean.js"></script>
+    <script src="components/revolverjs/js/revolver.min.js"></script>
+
+    <script type="text/javascript">
+      // get array of slides
+      var slides = document.getElementById('slider').getElementsByClassName('slide');
+      // pass them to Revolver
+      var slider = new Revolver(slides);
+    </script>
+  </body>
+</html>
